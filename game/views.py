@@ -17,7 +17,6 @@ def new_board(request):
     # TODO: If client requests new board,
     # return new board and render client-side.
     gb = GameBoard()
-    print json.dumps(gb.board)
 
     return HttpResponse(json.dumps(gb.board))
 

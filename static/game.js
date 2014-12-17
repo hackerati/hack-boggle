@@ -30,8 +30,8 @@ function newGameBoard() {
             for (var i=0; i<data.length; i++) {
                 t.append('<tr>');
                 for (var j=0; j<data[i].length; j++) {
-                    //t.append('<td data-x:"'+i+'" data-y:"'+j+'">'+data[i][j]+'</td>');
-                    t.append('<td>'+data[i][j]+'</td>');
+                    t.append('<td data-x:"'+i+'" data-y:"'+j+'">'+data[i][j]+'</td>');
+                    //t.append('<td>'+data[i][j]+'</td>');
                 }
                 t.append('</tr>');
             }
@@ -55,6 +55,7 @@ function userClick() {
     // where the current selected tile is
     //
     // if no tile clicked, user may click anywhere
+    //
     //
     console.log(this);
     //if (userWord === '') {
