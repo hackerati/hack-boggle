@@ -30,6 +30,7 @@ function newGameBoard() {
             for (var i=0; i<data.length; i++) {
                 t.append('<tr>');
                 for (var j=0; j<data[i].length; j++) {
+                    //t.append('<td data-x:"'+i+'" data-y:"'+j+'">'+data[i][j]+'</td>');
                     t.append('<td>'+data[i][j]+'</td>');
                 }
                 t.append('</tr>');
@@ -40,7 +41,12 @@ function newGameBoard() {
     return;
 }
 
-$('div.starter-template table tbody td').on('click', userClick);
+var userWord = '';
+
+$(document).ready(function() {
+    newGameBoard();
+    $('div.starter-template table tbody').on('click', 'td', userClick);
+});
 
 function userClick() {
     // determine if what the user clicked was valid
@@ -50,8 +56,14 @@ function userClick() {
     //
     // if no tile clicked, user may click anywhere
     //
-    
     console.log(this);
+    //if (userWord === '') {
+    //    this.cssText('background: red;');
+    //}
+
+    //
+    //console.log(this);
 
     return;
 }
+
